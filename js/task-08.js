@@ -3,8 +3,8 @@ const loginForm = document.querySelector(".login-form");
 loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-const emailInput = this.elements.email;
-const passwordInput = this.elements.password;
+const emailInput = event.target.elements.email;
+const passwordInput = event.target.elements.password;
     
 if (!emailInput.value || !passwordInput.value) {
     alert("All fields must be filled.");
@@ -16,5 +16,5 @@ const formInput = {
 };
     
     console.log(formInput);
-    this.reset();
+    event.target.reset();
 });
